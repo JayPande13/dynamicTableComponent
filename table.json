@@ -1,0 +1,271 @@
+{
+    "controls": [
+      {
+        "name": "Table",
+        "label": "Table",
+        "type": "table",
+        "hide": false,
+        "showPagination": true,
+        "options": [
+          {
+            "name": "Registration_Number",
+            "label": "Registration Number",
+            "sort": true,
+            "sortKey": "RegistrationNumber",
+            "hide": false,
+            "showLink": true,
+            "prefLink": "../view-form",
+            "suffLink": ""
+          },
+          {
+            "name": "Declaration_Type",
+            "label": "Declaration Type",
+            "sort": true,
+            "sortKey": "DeclarationType",
+            "hide": false,
+            "showLink": false,
+            "prefLink": "",
+            "SuffLink": ""
+          },
+          {
+            "name": "Status",
+            "label": "Status",
+            "sort": true,
+            "sortKey": "Status",
+            "hide": false,
+            "showLink": false,
+            "prefLink": "",
+            "suffLink": ""
+          },
+          {
+            "name": "Submission_Date",
+            "label": "Submission Date",
+            "sort": true,
+            "sortKey": "SubmissionDate",
+            "hide": false,
+            "showLink": false,
+            "prefLink": "",
+            "suffLink": ""
+          },
+          {
+            "name": "Customs_Office",
+            "label": "Customs Office",
+            "sort": true,
+            "sortKey": "CustomsOffice",
+            "hide": false,
+            "showLink": false,
+            "prefLink": "",
+            "suffLink": ""
+          },
+          {
+            "name": "Actions",
+            "label": "Actions",
+            "sort": false,
+            "sortKey": "Actions",
+            "hide": false,
+            "showLink": false,
+            "options": [],
+            "prefLink": "",
+            "suffLInk": ""
+          }
+        ]
+      }
+    ],
+
+  "tableData": [
+    {
+      "id": 1,
+      "Registration_Number": 765565655,
+      "Declaration_Type": "Exported",
+      "Status": "Accepted",
+      "Submission_Date": "13-Feb-2022",
+      "Customs_Office": "Indoor",
+      "Action": [
+        {
+          "name": "View",
+          "iconType": "eye",
+          "id": "View",
+          "prefLink": "../view-form",
+          "suffLink": "",
+          "popconfirm": false
+        },
+        {
+          "name": "edit",
+          "iconType": "edit",
+          "id": "Edit",
+          "prefLink": "/app/ics-declaration/update-form",
+          "suffLink": "Edit",
+          "popconfirm": false
+        },
+        {
+          "name": "Amend",
+          "iconType": "edit",
+          "id": "Amend",
+          "prefLink": "",
+          "suffLink": "Amend",
+          "popconfirm": false
+        },
+        {
+          "name": "Delete",
+          "iconType": "close-circle",
+          "id": "Delete",
+          "prefLink": "",
+          "suffLink": "Delete",
+          "popconfirm": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "Registration_Number": 765565333,
+      "Declaration_Type": "Exported",
+      "Status": "Accepted",
+      "Submission_Date": "13-Feb-2021",
+      "Customs_Office": "Oudoor",
+      "Action": [
+        {
+          "name": "View",
+          "iconType": "eye",
+          "id": "View",
+          "prefLink": "../view-form",
+          "suffLink": "",
+          "popconfirm": false
+        },
+        {
+          "name": "edit",
+          "iconType": "edit",
+          "id": "Edit",
+          "prefLink": "/app/ics-declaration/update-form",
+          "suffLink": "Edit",
+          "popconfirm": false
+        },
+        {
+          "name": "Amend",
+          "iconType": "edit",
+          "id": "Amend",
+          "prefLink": "",
+          "suffLink": "Amend",
+          "popconfirm": false
+        },
+        {
+          "name": "Delete",
+          "iconType": "close-circle",
+          "id": "Delete",
+          "prefLink": "",
+          "suffLink": "Deleted",
+          "popconfirm": true
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "Registration_Number": 76556565334,
+      "Declaration_Type": "Exported",
+      "Status": "Accepted",
+      "Submission_Date": "13-Feb-2020",
+      "Customs_Office": "Indoor",
+      "Action": [
+        {
+          "name": "View",
+          "iconType": "eye",
+          "id": "View",
+          "prefLink": "../view-form",
+          "suffLink": "",
+          "popconfirm": false
+        },
+        {
+          "name": "edit",
+          "iconType": "edit",
+          "id": "Edit",
+          "prefLink": "/app/ics-declaration/update-form",
+          "suffLink": "Edit",
+          "popconfirm": false
+        },
+        {
+          "name": "Amend",
+          "iconType": "edit",
+          "id": "Amend",
+          "prefLink": "",
+          "suffLink": "Amend",
+          "popconfirm": false
+        },
+        {
+          "name": "Delete",
+          "iconType": "close-circle",
+          "id": "Delete",
+          "prefLink": "",
+          "suffLink": "Deleted",
+          "popconfirm": true
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "Registration_Number": 867575644,
+      "Declaration_Type": "Process",
+      "Status": "Declined",
+      "Submission_Date": "13-Feb-2022",
+      "Customs_Office": "Outdoor",
+      "Action": [
+        {
+          "name": "View",
+          "iconType": "eye",
+          "id": "View",
+          "prefLink": "../view-form",
+          "suffLink": "",
+          "popconfirm": false
+        },
+        {
+          "name": "Amend",
+          "iconType": "edit",
+          "id": "Amend",
+          "prefLink": "",
+          "suffLink": "Amend",
+          "popconfirm": false
+        },
+        {
+          "name": "Delete",
+          "iconType": "close-circle",
+          "id": "Delete",
+          "prefLink": "",
+          "suffLink": "Delete",
+          "popconfirm": true
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "Registration_Number":12423543534,
+      "Declaration_Type": "declined",
+      "Status": "shipped",
+      "Submission_Date": "13-Feb-2022",
+      "Customs_Office": "inside",
+      "Action":[
+        {
+          "name": "edit",
+          "iconType": "edit",
+          "id": "Edit",
+          "prefLink": "/app/ics-declaration/update-form",
+          "suffLink": "Edit",
+          "popconfirm": false
+        },
+        {
+          "name": "Amend",
+          "iconType": "edit",
+          "id": "Amend",
+          "prefLink": "",
+          "suffLink": "Amend",
+          "popconfirm": false
+        },
+        {
+          "name": "Delete",
+          "iconType": "close-circle",
+          "id": "Delete",
+          "prefLink": "",
+          "suffLink": "Deleted",
+          "popconfirm": true
+        }
+      ]
+    }
+  ]
+}

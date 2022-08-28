@@ -1,0 +1,12 @@
+
+    <app-table-component
+      [table]="table"
+      [tableData]="tableData"
+      (SortRequest)="getSort($event)"
+      (Paginate)="getPagination($event)"
+      [pageIndex]="pageIndex"
+      [pageSize]="pageSize"
+      [totalItem]="totalItems"
+      (Navigate)="routerLink($event)"
+    ></app-table-component>
+

@@ -1,0 +1,85 @@
+<ng-template class="m-lg" ngFor let-control [ngForOf]="table">
+  <ng-template [ngIf]="control.type == 'table'">
+  <nz-table
+    #basicTable
+    [nzData]="tableData"
+    [nzFrontPagination]="false"
+    [nzTotal]="totalItem"
+    [nzPageSize]="pageSize"
+    [nzPageIndex]="pageIndex"
+    (nzPageIndexChange)="pageindexchange($event)"
+    [nzShowPagination]="control.showPagination"
+    [nzLoading]="loadingList"
+  >
+    <thead (nzSortOrderChange)="sort($event)" nzSingleSort>
+      <tr>
+        <ng-template ngFor let-heads [ngForOf]="control.options">
+          <th
+            [nzShowSort]="heads.sort"
+            [nzColumnKey]="heads.name"
+            *ngIf="!heads.hide"
+          >
+            {{ heads.label }}
+          </th>
+        </ng-template>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of basicTable.data">
+        <ng-template ngFor let-col [ngForOf]="control.options">
+          <ng-template [ngIf]="!col.hide && col.showLink">
+            <td *ngIf="col.name != 'Actions'">
+              <a (click)="navigateTo(col.prefLink, data.id, col.suffLink)">
+                {{ data[col.name] }}</a
+              >
+            </td>
+          </ng-template>
+          <ng-template [ngIf]="!col.showLink && !col.hide">
+            <td *ngIf="col.name != 'Actions'">{{ data[col.name] }}</td>
+          </ng-template>
+        </ng-template>
+
+        <td>
+          <a nz-button nz-dropdown [nzDropdownMenu]="menu"
+            ><i nz-icon nzType="more"></i
+          ></a>
+          <nz-dropdown-menu #menu="nzDropdownMenu">
+            <ul nz-menu nzSelectable>
+              <li nz-menu-item *ngFor="let option of data.Action">
+                <ng-template [ngIf]="option.popconfirm">
+                  <a
+                    nz-popconfirm
+                    nzPopconfirmTitle="Are you sure?"
+                    nzOkText="ok"
+                    nzCancelText="cancel"
+                    [id]="option.id"
+                    (nzOnConfirm)="
+                      navigateTo(option.prefLink, data.id, option.suffLink)
+                    "
+                    (nzOnCancel)="cancelled()"
+               
+                  >
+                    <i nz-icon [nzType]="option.iconType" nzTheme="outline"></i>
+                    {{ option.name }}</a
+                  >
+                </ng-template>
+                <ng-template [ngIf]="!option.popconfirm">
+                  <a
+                    [id]="option.id"
+                    (click)="
+                      navigateTo(option.prefLink, data.id, option.suffLink)
+                    "
+                  >
+                    <i nz-icon [nzType]="option.iconType" nzTheme="outline"></i>
+                    {{ option.name }}</a
+                  >
+                </ng-template>
+              </li>
+            </ul>
+          </nz-dropdown-menu>
+        </td>
+      </tr>
+    </tbody>
+  </nz-table>
+</ng-template>
+</ng-template>
